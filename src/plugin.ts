@@ -158,14 +158,14 @@ export class ChartDatasourcePrometheusPlugin {
                 ctx.font = "16px normal 'Helvetica Nueue'";
             });
         } else if (chart['datasource-prometheus'].loading == true) {
-            if (options.loadingMsg) {
-                this.writeText(chart, options.loadingMsg.message, (ctx) => {
-                    ctx.direction = options.loadingMsg.direction;
-                    ctx.textAlign = options.loadingMsg.textAlign;
-                    ctx.textBaseline = options.loadingMsg.textBaseline;
-                    ctx.font = options.loadingMsg.font;
-                });
-            }
+            // if (options.loadingMsg) {
+            //     this.writeText(chart, options.loadingMsg.message, (ctx) => {
+            //         ctx.direction = options.loadingMsg.direction;
+            //         ctx.textAlign = options.loadingMsg.textAlign;
+            //         ctx.textBaseline = options.loadingMsg.textBaseline;
+            //         ctx.font = options.loadingMsg.font;
+            //     });
+            // }
         } else if (chart.data.datasets.length == 0) {
             this.writeText(chart, options.noDataMsg.message, (ctx) => {
                 ctx.direction = options.noDataMsg.direction;
